@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrepPal </title>
+    <link rel="icon" href="ss.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style id="app-style">  
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg" id="main-navbar">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="#" data-view="landing">
+                    <img src="ss.png" alt="PrepPal Logo" class="me-2" style="width: 27px; height: 27px; margin-bottom: 5px;">
+                    <span class="fw-bold">PrepPal</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-view="landing">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-view="features">Features</a>
+                        </li>
+                        <li class="nav-item" id="login-nav-item">
+                            <a class="nav-link" href="#" data-view="login">Login</a>
+                        </li>
+                        <li class="nav-item" id="signup-nav-item">
+                            <a class="nav-link" href="#" data-view="signup">Sign Up</a>
+                        </li>
+                        <li class="nav-item d-none" id="dashboard-nav-item">
+                            <a class="nav-link" href="#" data-view="dashboard">Dashboard</a>
+                        </li>
+                        <li class="nav-item d-none" id="logout-nav-item">
+                            <a class="nav-link" href="#" id="logout-link">Logout</a>
+                        </li>
+                        <li class="nav-item ms-2">
+                            <button class="btn btn-sm rounded-circle" id="theme-toggle">
+                                <i class="bi bi-moon-fill"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Landing Page -->
+            <div class="view active" id="landing-view">
+                <div class="hero-section">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <h1 class="display-4 fw-bold mb-4">Effortless Prep. Exceptional Results.<br> Meet PrepPal.</h1>
+                                <p class="lead mb-4">Built with cutting-edge AI, PrepPal transforms how you study — offering smart note summarization, flashcard generation, quiz creation, and more in seconds</p>
+                                <div class="d-flex gap-3">
+                                    <a href="#" class="btn btn-light btn-lg" data-view="signup">Get Started</a>
+                                    <a href="#" class="btn btn-outline-light btn-lg" data-view="features">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-none d-lg-block">
+                                <div class="text-center">
+                                   <img src="ss.png" alt="PrepPal Logo" class="me-2" style="width: 460px; height: 460px; margin-bottom: 5px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="section-title text-center">
+                        <h2 class="fw-bold">How PrepPal Helps You Succeed</h2>
+                        <p class="lead">Powerful AI tools designed specifically for students</p>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card feature-card h-100">
+                                <div class="card-body text-center p-4">
+                                    <i class="bi bi-file-earmark-text feature-icon"></i>
+                                    <h4>Note Summarizer</h4>
+                                    <p>Turn lengthy notes or textbook chapters into concise, easy-to-understand summaries.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card feature-card h-100">
+                                <div class="card-body text-center p-4">
+                                    <i class="bi bi-chat-dots feature-icon"></i>
+                                    <h4>Study Chatbot</h4>
+                                    <p>Ask questions about any topic and get instant, accurate answers to clarify your understanding.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card feature-card h-100">
+                                <div class="card-body text-center p-4">
+                                    <i class="bi bi-card-heading feature-icon"></i>
+                                    <h4>Flashcard Generator</h4>
+                                    <p>Automatically create effective flashcards from your study materials for better memorization.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card feature-card h-100">
+                                <div class="card-body text-center p-4">
+                                    <i class="bi bi-question-circle feature-icon"></i>
+                                    <h4>Quiz Generator</h4>
+                                    <p>Generate personalized quizzes to test your knowledge and identify areas for improvement.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card feature-card h-100">
+                                <div class="card-body text-center p-4">
+                                    <i class="bi bi-file-earmark-pdf feature-icon"></i>
+                                    <h4>PDF Processing</h4>
+                                    <p>Upload PDFs and instantly process them with any of our tools for seamless studying.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-5">
+                        <a href="#" class="btn btn-primary btn-lg" data-view="signup">Start Your Learning Journey</a>
+                    </div>
+                </div>
+                <footer class="footer">
+        <div class="container text-center">
+            <p class="mb-0 text-end">&copy; 2025 Waqar Akhtar. All rights reserved.</p>
+        </div>
+    </footer>
+            </div>
+
+            <!-- Features Page -->
+            <div class="view" id="features-view">
+                <div class="container">
+                    <div class="section-title text-center">
+                        <h2 class="fw-bold">Features That Transform Your Study Experience</h2>
+                        <p class="lead">Explore the complete suite of AI-powered tools designed for modern learning</p>
+                    </div>
+
+                    <div class="row g-4 mb-5">
+                        <div class="col-lg-6">
+                            <div class="card h-100">
+                                <div class="card-body p-4">
+                                    <h3 class="card-title"><i class="bi bi-file-earmark-text text-primary me-2"></i> Note Summarizer</h3>
+                                    <p class="card-text">Our advanced AI analyzes your notes or textbook content and generates clear, concise summaries that capture the most important information. Perfect for:</p>
+                                    <ul>
+                                        <li>Exam preparation</li>
+                                        <li>Processing lengthy textbook chapters</li>
+                                        <li>Creating study guides</li>
+                                        <li>Reviewing key concepts quickly</li>
+                                    </ul>
+                                    <p>Simply paste your text or upload a PDF, and our AI will identify the most crucial points and organize them into a coherent summary.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card h-100">
+                                <div class="card-body p-4">
+                                    <h3 class="card-title"><i class="bi bi-chat-dots text-primary me-2"></i> Study Chatbot</h3>
+                                    <p class="card-text">Get instant answers to your academic questions with our AI-powered study assistant. Our chatbot can:</p>
+                                    <ul>
+                                        <li>Explain complex concepts in simple terms</li>
+                                        <li>Provide examples to illustrate difficult ideas</li>
+                                        <li>Answer follow-up questions for deeper understanding</li>
+                                        <li>Reference your uploaded materials for context-aware help</li>
+                                    </ul>
+                                    <p>The chatbot learns from your interactions to provide increasingly personalized responses tailored to your learning style.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card h-100">
+                                <div class="card-body p-4">
+                                    <h3 class="card-title"><i class="bi bi-card-heading text-primary me-2"></i> Flashcard Generator</h3>
+                                    <p class="card-text">Create effective study flashcards without the manual work. Our AI tool:</p>
+                                    <ul>
+                                        <li>Identifies key terms and concepts from your materials</li>
+                                        <li>Creates question-answer pairs designed for optimal learning</li>
+                                        <li>Organizes flashcards by topic for structured review</li>
+                                        <li>Allows customization and editing of generated cards</li>
+                                    </ul>
+                                    <p>Use the interactive flashcard system to test your recall and track your progress as you master the material.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card h-100">
+                                <div class="card-body p-4">
+                                    <h3 class="card-title"><i class="bi bi-question-circle text-primary me-2"></i> Quiz Generator</h3>
+                                    <p class="card-text">Test your knowledge with customized quizzes created from your study materials. The quiz generator:</p>
+                                    <ul>
+                                        <li>Creates multiple-choice, true/false, and short answer questions</li>
+                                        <li>Focuses on the most important concepts</li>
+                                        <li>Provides explanations for correct answers</li>
+                                        <li>Adjusts difficulty based on your performance</li>
+                                    </ul>
+                                    <p>Regular quizzing helps reinforce learning and identify areas where you need more focus.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="card h-100">
+                                <div class="card-body p-4">
+                                    <h3 class="card-title"><i class="bi bi-file-earmark-pdf text-primary me-2"></i> PDF Processing</h3>
+                                    <p class="card-text">Upload any PDF document and process it with our full suite of tools. Our PDF processor:</p>
+                                    <ul>
+                                        <li>Extracts text accurately from various PDF formats</li>
+                                        <li>Preserves document structure for better analysis</li>
+                                        <li>Works with textbooks, lecture slides, research papers, and more</li>
+                                        <li>Integrates directly with all other tools in the platform</li>
+                                    </ul>
+                                    <p>This seamless integration means you can upload a textbook chapter and immediately generate summaries, flashcards, quizzes, or ask the chatbot questions about the content.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-5">
+                        <div class="card-body p-4">
+                            <h3 class="card-title text-center">Additional Features</h3>
+                            <div class="row g-4 mt-3">
+                                <div class="col-md-4">
+                                    <div class="d-flex">
+                                        <div class="me-3">
+                                            <i class="bi bi-moon-stars fs-3 text-primary"></i>
+                                        </div>
+                                        <div>
+                                            <h5>Dark Mode</h5>
+                                            <p>Reduce eye strain during late-night study sessions with our elegant dark theme.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="d-flex">
+                                        <div class="me-3">
+                                            <i class="bi bi-phone fs-3 text-primary"></i>
+                                        </div>
+                                        <div>
+                                            <h5>Responsive Design</h5>
+                                            <p>Study seamlessly across all your devices, from desktop to mobile.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="d-flex">
+                                        <div class="me-3">
+                                            <i class="bi bi-phone fs-3 text-primary"></i>
+                                        </div>
+                                        <div>
+                                            <h5>Voice-to-Text Input</h5>
+                                            <p>Speak your text and let the AI convert it to text for you.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mb-5">
+                        <a href="#" class="btn btn-primary btn-lg" data-view="signup">Join Study Assistant Today</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Login Page -->
+            <div class="view" id="login-view">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="card login-card">
+                                <div class="card-body">
+                                    <h2 class="text-center mb-4">Welcome Back</h2>
+                                    <form id="login-form">
+                                        <div class="mb-3">
+                                            <label for="login-email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="login-email" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="login-password" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="login-password" required>
+                                            <div class="mt-2 text-end">
+                                                <a href="#" class="small text-decoration-none">Forgot password?</a>
+                                            </div>
+                                        </div>
+                                        <div class="d-grid gap-2">
+                                            <button type="submit" class="btn btn-primary">Login</button>
+                                        </div>
+                                        <div class="text-center mt-3">
+                                            <span>Don't have an account? </span>
+                                            <a href="#" data-view="signup" class="text-decoration-none">Sign up</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sign Up Page -->
+            <div class="view" id="signup-view">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="card login-card">
+                                <div class="card-body">
+                                    <h2 class="text-center mb-4">Create Your Account</h2>
+                                    <form id="signup-form">
+                                        <div class="mb-3">
+                                            <label for="signup-name" class="form-label">Full Name</label>
+                                            <input type="text" class="form-control" id="signup-name" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="signup-email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="signup-email" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="signup-password" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="signup-password" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="signup-confirm-password" class="form-label">Confirm Password</label>
+                                            <input type="password" class="form-control" id="signup-confirm-password" required>
+                                        </div>
+                                        <div class="d-grid gap-2">
+                                            <button type="submit" class="btn btn-primary">Sign Up</button>
+                                        </div>
+                                        <div class="text-center mt-3">
+                                            <span>Already have an account? </span>
+                                            <a href="#" data-view="login" class="text-decoration-none">Login</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard -->
+            <div class="view" id="dashboard-view">
+                <div class="dashboard-sidebar" id="sidebar">
+                    <div class="px-4 mb-4">
+                        <h5>PrepPal</h5>
+                    </div>
+                    <div class="sidebar-menu">
+                        <a href="#" class="sidebar-link active" data-dashboard-view="dashboard-home">
+                            <i class="bi bi-house sidebar-icon"></i> Dashboard
+                        </a>
+                        <a href="#" class="sidebar-link" data-dashboard-view="summarizer">
+                            <i class="bi bi-file-earmark-text sidebar-icon"></i> Note Summarizer
+                        </a>
+                        <a href="#" class="sidebar-link" data-dashboard-view="chatbot">
+                            <i class="bi bi-chat-dots sidebar-icon"></i> Study Chatbot
+                        </a>
+                        <a href="#" class="sidebar-link" data-dashboard-view="flashcards">
+                            <i class="bi bi-card-heading sidebar-icon"></i> Flashcards
+                        </a>
+                        <a href="#" class="sidebar-link" data-dashboard-view="quiz">
+                            <i class="bi bi-question-circle sidebar-icon"></i> Quiz Generator
+                        </a>
+                        <a href="#" class="sidebar-link" data-dashboard-view="pdf">
+                            <i class="bi bi-file-earmark-pdf sidebar-icon"></i> PDF Upload
+                        </a>
+                        <a href="#" class="sidebar-link" data-dashboard-view="settings">
+                            <i class="bi bi-gear sidebar-icon"></i> Settings
+                        </a>
+                    </div>
+                </div>
+
+                <div class="dashboard-main">
+                    <!-- Dashboard Home -->
+                    <div class="dashboard-view active" id="dashboard-home-view">
+                        <h2 class="mb-4">Welcome, <span id="user-name">Student</span>!</h2>
+                        <div class="row g-4">
+                            <div class="col-md-6 col-xl-3">
+                                <div class="card feature-card h-100">
+                                    <div class="card-body text-center p-4">
+                                        <i class="bi bi-file-earmark-text feature-icon"></i>
+                                        <h4>Note Summarizer</h4>
+                                        <p>Condense lengthy notes into concise summaries</p>
+                                        <a href="#" class="btn btn-primary mt-2" data-dashboard-view="summarizer">Use Tool</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <div class="card feature-card h-100">
+                                    <div class="card-body text-center p-4">
+                                        <i class="bi bi-chat-dots feature-icon"></i>
+                                        <h4>Study Chatbot</h4>
+                                        <p>Get answers to your study questions</p>
+                                        <a href="#" class="btn btn-primary mt-2" data-dashboard-view="chatbot">Use Tool</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <div class="card feature-card h-100">
+                                    <div class="card-body text-center p-4">
+                                        <i class="bi bi-card-heading feature-icon"></i>
+                                        <h4>Flashcards</h4>
+                                        <p>Create and study with AI-generated flashcards</p>
+                                        <a href="#" class="btn btn-primary mt-2" data-dashboard-view="flashcards">Use Tool</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-xl-3">
+                                <div class="card feature-card h-100">
+                                    <div class="card-body text-center p-4">
+                                        <i class="bi bi-question-circle feature-icon"></i>
+                                        <h4>Quiz Generator</h4>
+                                        <p>Test your knowledge with custom quizzes</p>
+                                        <a href="#" class="btn btn-primary mt-2" data-dashboard-view="quiz">Use Tool</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-4">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Quick PDF Upload</h4>
+                                        <p>Upload a PDF to process with any of our tools</p>
+                                        <div class="form-upload" id="dashboard-dropzone">
+                                            <i class="bi bi-cloud-arrow-up fs-1 mb-2"></i>
+                                            <h5>Drag & Drop Your PDF Here</h5>
+                                            <p>or</p>
+                                            <button class="btn btn-primary" id="browse-pdf-btn">Browse Files</button>
+                                            <input type="file" id="dashboard-file-input" class="d-none" accept=".pdf">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Note Summarizer -->
+                    <div class="dashboard-view" id="summarizer-view">
+                        <h2 class="mb-4">Note Summarizer</h2>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Input Your Text</h5>
+                                <div class="mb-3">
+                                    <textarea class="form-control" id="summarizer-input" rows="8" placeholder="Paste your notes or text here to generate a summary..."></textarea>
+                                    <button class="btn btn-outline-primary mt-2" onclick="startSpeechToText()"><i class="bi bi-mic"></i> Start Speaking</button>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Or upload a PDF</label>
+                                        <div class="input-group">
+                                            <input type="file" class="form-control" id="summarizer-file" accept=".pdf">
+                                            <button class="btn btn-outline-secondary" type="button" id="summarizer-file-button">Upload</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Summary Length</label>
+                                        <select class="form-select" id="summary-length">
+                                            <option value="short">Short (25%)</option>
+                                            <option value="medium" selected>Medium (50%)</option>
+                                            <option value="long">Long (75%)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary" id="generate-summary-btn">Generate Summary</button>
+                            </div>
+                        </div>
+                        <div class="card" id="summary-result-card" style="display: none;">
+                            <div class="card-body">
+                                <h5 class="card-title">Summary</h5>
+                                <div id="summary-result" class="p-3 border rounded">
+                                    <p>This is a prototype. The summary will appear here after connecting to the API.</p>
+                                </div>
+                                <div class="mt-3">
+                                    <button class="btn btn-outline-primary" id="copy-summary-btn"><i class="bi bi-clipboard"></i> Copy</button>
+                                    <button class="btn btn-outline-primary ms-2" id="download-summary-btn"><i class="bi bi-download"></i> Download</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Study Chatbot -->
+                    <div class="dashboard-view" id="chatbot-view">
+                        <h2 class="mb-4">Study Chatbot</h2>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="chat-container">
+                                    <div class="chat-messages" id="chat-messages">
+                                        <div class="message bot-message">
+                                            <p class="mb-0">Hi there! I'm your AI study assistant. How can I help you today?</p>
+                                        </div>
+                                    </div>
+                                    <div class="chat-input">
+                                        <input type="file" id="chat-file-input" class="d-none" accept=".pdf">
+                                        <button class="btn btn-outline-primary" id="chat-upload-btn"><i class="bi bi-paperclip"></i></button>
+                                        <input type="text" class="form-control" id="chat-input" placeholder="Ask a question...">
+                                        <button class="btn btn-outline-primary" onclick="startSpeechToChat()"><i class="bi bi-mic"></i></button>
+                                        <button class="btn btn-primary" id="chat-send-btn"><i class="bi bi-send"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flashcards -->
+                    <div class="dashboard-view" id="flashcards-view">
+                        <h2 class="mb-4">Flashcard Generator</h2>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Create Flashcards</h5>
+                                <div class="mb-3">
+                                    <label class="form-label">Subject or Topic</label>
+                                    <input type="text" class="form-control" id="flashcard-topic" placeholder="E.g., Biology, World History, Python Programming">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Study Content</label>
+                                    <textarea class="form-control" id="flashcard-content" rows="6" placeholder="Paste your notes, textbook content, or any study material you want to convert to flashcards..."></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Or upload a PDF</label>
+                                    <div class="input-group">
+                                        <input type="file" class="form-control" id="flashcard-file" accept=".pdf">
+                                        <button class="btn btn-outline-secondary" type="button" id="flashcard-file-button">Upload</button>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Number of Flashcards</label>
+                                    <select class="form-select" id="flashcard-count">
+                                        <option value="5">5 cards</option>
+                                        <option value="10" selected>10 cards</option>
+                                        <option value="15">15 cards</option>
+                                        <option value="20">20 cards</option>
+                                    </select>
+                                </div>
+                                <button class="btn btn-primary" id="generate-flashcards-btn">Generate Flashcards</button>
+                            </div>
+                        </div>
+                        <div id="flashcards-container" style="display: none;">
+                            <h5 class="mb-3">Your Flashcards</h5>
+                            <div class="row g-4" id="flashcards-deck">
+                                <div class="col-md-4">
+                                    <div class="flashcard">
+                                        <div class="flashcard-inner">
+                                            <div class="flashcard-front">
+                                                <h5>Example Question</h5>
+                                                <p class="small">(Click to flip)</p>
+                                            </div>
+                                            <div class="flashcard-back">
+                                                <p>This is a prototype. Flashcards will appear here after connecting to the API.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="btn btn-outline-primary" id="save-flashcards-btn"><i class="bi bi-save"></i> Save Deck</button>
+                                <button class="btn btn-outline-primary ms-2" id="print-flashcards-btn"><i class="bi bi-printer"></i> Print</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quiz Generator -->
+                    <div class="dashboard-view" id="quiz-view">
+                        <h2 class="mb-4">Quiz Generator</h2>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Create a Quiz</h5>
+                                <div class="mb-3">
+                                    <label class="form-label">Subject or Topic</label>
+                                    <input type="text" class="form-control" id="quiz-topic" placeholder="E.g., Cell Biology, American Civil War, JavaScript Basics">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Study Content</label>
+                                    <textarea class="form-control" id="quiz-content" rows="6" placeholder="Paste your notes, textbook content, or any study material you want to create a quiz from..."></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Or upload a PDF</label>
+                                    <div class="input-group">
+                                        <input type="file" class="form-control" id="quiz-file" accept=".pdf">
+                                        <button class="btn btn-outline-secondary" type="button" id="quiz-file-button">Upload</button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Number of Questions</label>
+                                        <select class="form-select" id="quiz-count">
+                                            <option value="5">5 questions</option>
+                                            <option value="10" selected>10 questions</option>
+                                            <option value="15">15 questions</option>
+                                            <option value="20">20 questions</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Difficulty Level</label>
+                                        <select class="form-select" id="quiz-difficulty">
+                                            <option value="easy">Easy</option>
+                                            <option value="medium" selected>Medium</option>
+                                            <option value="hard">Hard</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary" id="generate-quiz-btn">Generate Quiz</button>
+                            </div>
+                        </div>
+                        <div id="quiz-container" style="display: none;">
+                        </div>
+                    </div>
+
+                    <!-- PDF Upload -->
+                    <div class="dashboard-view" id="pdf-view">
+                        <h2 class="mb-4">PDF Upload & Processing</h2>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Upload Your PDF</h5>
+                                <div class="form-upload" id="pdf-dropzone">
+                                    <i class="bi bi-cloud-arrow-up fs-1 mb-2"></i>
+                                    <h5>Drag & Drop Your PDF Here</h5>
+                                    <p>or</p>
+                                    <button class="btn btn-primary" id="browse-pdf-btn">Browse Files</button>
+                                    <input type="file" id="pdf-file-input" class="d-none" accept=".pdf">
+                                </div>
+                                <div id="pdf-info" class="mt-3" style="display: none;">
+                                    <div class="alert alert-success d-flex align-items-center" role="alert">
+                                        <i class="bi bi-check-circle-fill me-2"></i>
+                                        <div>
+                                            <span id="pdf-filename"></span> uploaded successfully!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" id="pdf-actions" style="display: none;">
+                            <div class="card-body">
+                                <h5 class="card-title">Choose Action</h5>
+                                <p>What would you like to do with this PDF?</p>
+                                <div class="row g-3">
+                                    <div class="col-md-6 col-xl-3">
+                                        <div class="card feature-card h-100">
+                                            <div class="card-body text-center p-3">
+                                                <i class="bi bi-file-earmark-text feature-icon"></i>
+                                                <h5>Summarize</h5>
+                                                <button class="btn btn-sm btn-primary mt-2" id="pdf-summarize-btn">Select</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xl-3">
+                                        <div class="card feature-card h-100">
+                                            <div class="card-body text-center p-3">
+                                                <i class="bi bi-chat-dots feature-icon"></i>
+                                                <h5>Ask Questions</h5>
+                                                <button class="btn btn-sm btn-primary mt-2" id="pdf-chat-btn">Select</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xl-3">
+                                        <div class="card feature-card h-100">
+                                            <div class="card-body text-center p-3">
+                                                <i class="bi bi-card-heading feature-icon"></i>
+                                                <h5>Create Flashcards</h5>
+                                                <button class="btn btn-sm btn-primary mt-2" id="pdf-flashcards-btn">Select</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xl-3">
+                                        <div class="card feature-card h-100">
+                                            <div class="card-body text-center p-3">
+                                                <i class="bi bi-question-circle feature-icon"></i>
+                                                <h5>Generate Quiz</h5>
+                                                <button class="btn btn-sm btn-primary mt-2" id="pdf-quiz-btn">Select</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settings -->
+                    <div class="dashboard-view" id="settings-view">
+                        <h2 class="mb-4">Settings</h2>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Account Settings</h5>
+                                <div class="mb-3">
+                                    <label class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="settings-name" value="John Doe">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="settings-email" value="john.doe@example.com">
+                                </div>
+                                <button class="btn btn-primary" id="save-account-settings">Save Changes</button>
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Appearance</h5>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="mb-0">Dark Mode</h6>
+                                        <p class="text-muted small mb-0">Enable dark mode for reduced eye strain</p>
+                                    </div>
+                                    <div class="settings-toggle" id="settings-dark-mode">
+                                        <div class="toggle-handle"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Storage</h5>
+                                <p>Manage your uploaded documents and generated content</p>
+                                <button class="btn btn-outline-danger" id="clear-storage-btn">Clear All Stored Data</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mobile-toggle" id="mobile-toggle">
+                    <i class="bi bi-list"></i>
+                </div>
+                <div class="overlay" id="sidebar-overlay"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script id="app-script"></script>
+    <script src="script.js"></script>
+</body>
+</html>
